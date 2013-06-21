@@ -23,11 +23,15 @@
  */
 
 #import "SimpleAudioEngine.h"
+#import <AVFoundation/AVFoundation.h>
+#define CD_MAX_BUFFERS 64
 
 @implementation SimpleAudioEngine
 
 static SimpleAudioEngine *sharedEngine = nil;
 static CDSoundEngine* soundEngine = nil;
+static NSMutableDictionary* loadedEffects = nil;
+static bool usedBuffers[CD_MAX_BUFFERS];
 static CDAudioManager *am = nil;
 static CDBufferManager *bufferManager = nil;
 

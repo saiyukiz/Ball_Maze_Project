@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="starttown2" tilewidth="32" tileheight="32">
+  <image source="starttown2.png" width="479" height="477"/>
+ </tileset>
+ <layer name="BackGround" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="Walls" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt3DtOAzEUQNEUUFAiChbBctgCy0FiBakoSfbA0mAkCqQ0Hn+er9/cI1lp8rF1pVHimczpVO5lx3M1nj1Y7MFiDxZ7sNiDxR4sWXt8AMZrxbyz9niGjL2y9ljV1uNt0tCtrcd10tAtj1cs9mCxB4s9WOzBYg8We7DYg4XSY9YeAW2/gNJj1h7Bw9/j0/glFqH0mIW2ftp8otHWT5tPNNr6afOJRls/bT7RaOunzScabf20+USjrZ82n2i09R/9vCmtx9HZo6/WfSd79HVufL09+rIHiz1Y7MFiDxZ7sNiDxR4s9mBZpUfma2L+a+0RdV3J14DxGTT3PVp7qC97sNiDxR4s9mCZ1aPku2jN/RlWN6PH9+94LxxH4/GKxR7lRv9/Zjs+26PcJWDYg8UeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1YMvSYfZ+pntfWZejRusd91+E9Lp3W0tIj4vxMhPugzynR0iPi/EyELD2ysAeLPVjswWIPFnuw2IPFHiw1PUb9Bj5Xvi6Tmh4j/s9YO7LdE49yr3NJkiRJ+WX7fbs60v6V8vfw+hKWx44jQvYeq7EHiz1Y7MFiDxZ7aGU/R14nUw==
+  </data>
+ </layer>
+ <objectgroup name="spawnpoint" width="100" height="100">
+  <object name="player" x="132" y="106" width="63" height="56">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </object>
+  <object name="monster1" x="1668" y="386" width="56" height="62">
+   <properties>
+    <property name="SnakeSpawn" value="1"/>
+   </properties>
+  </object>
+  <object name="monster2" x="804" y="1154" width="58" height="59">
+   <properties>
+    <property name="crocSpawn" value="1"/>
+   </properties>
+  </object>
+  <object name="monster3" x="386" y="2885" width="62" height="59">
+   <properties>
+    <property name="crocSpawn" value="1"/>
+   </properties>
+  </object>
+  <object name="monster4" x="1637" y="2921" width="59" height="55">
+   <properties>
+    <property name="SnakeSpawn" value="1"/>
+   </properties>
+  </object>
+  <object name="monster5" x="2820" y="1763" width="59" height="56">
+   <properties>
+    <property name="crocSpawn" value="1"/>
+   </properties>
+  </object>
+  <object name="goal" x="516" y="128" width="57" height="58"/>
+  <object name="monster6" x="866" y="612" width="62" height="54">
+   <properties>
+    <property name="bearSpawn" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="wall_collide" width="100" height="100">
+  <object name="wall1" x="2" y="2" width="3195" height="27">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall2" x="4" y="34" width="26" height="3162">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall3" x="33" y="3159" width="3165" height="39">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall4" x="3169" y="33" width="26" height="3125">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall5" x="353" y="33" width="30" height="958">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall6" x="386" y="342" width="956" height="40">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall7" x="2079" y="249" width="1089" height="35">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall8" x="1441" y="664" width="1055" height="35">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall9" x="2401" y="707" width="27" height="696">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall10" x="1890" y="1046" width="27" height="1502">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall11" x="1089" y="1719" width="796" height="40">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall12" x="255" y="2202" width="1089" height="34">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall13" x="768" y="2242" width="31" height="381">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall14" x="32" y="1399" width="702" height="37">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall15" x="2847" y="1589" width="319" height="38">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall16" x="2370" y="2232" width="796" height="37">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall17" x="1185" y="2553" width="1150" height="35">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall18" x="768" y="2873" width="32" height="284">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="wall19" x="2560" y="2935" width="606" height="37">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

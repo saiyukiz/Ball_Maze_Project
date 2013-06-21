@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="Rock" tilewidth="16" tileheight="16">
+  <image source="Rock.png" width="512" height="512"/>
+ </tileset>
+ <layer name="rock" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt09dRlQEUhdHLFSQrtkDOoQWRIElsgSgZWhCQnFoAExlbACTHFpAoCNiBqwf/B8e5e2a9nu/phEKRRfbvLpU00skgkyyyySGXPPIpoJAiiikJoP+SUl5RRjkVVPKaKqqpoZY63lDP2wD6DTTSRDMttPKONtrpoJMuuumhl74A+u/pZ4BBPjDEMCOMMsY4E0wyxTQzAfRnmeMjn/jMF74yzwKLLLHMCqus8S2A/jobbPKdLbbZYZc99jngkCOOOeE0gP4ZPzjngkuuuOaGn9xyxy/ueeCR3wH0w1Gh0BOiieEpscQRTwKJJJHMM56Twouov++nupFGOhlkkkU2OeSSRz4FFFJEMSUB9F+6UcoryiingkpeU0U1NdRSxxvqeRtAv8GNRppopoVW3tFGOx100kU3PfTSF0D/vRv9DDDIB4YYZoRRxhhngkmmmGYmgP6sG3N85BOf+cJX5llgkSWWWWGVNb4F0F93Y4NNvrPFNjvsssc+BxxyxDEnnAbQP3PjB+dccMkV19zwk1vu+MU9DzzyO4B+OOz/iSaGp8QSRzwJJJJEMs94Tgovwn/fT3UjjXQyyCSLbHLIJY98CiikiGJKAuhHFllkkf2v+wMvxnzZ
+  </data>
+ </layer>
+ <objectgroup name="spawnpoint" width="32" height="32">
+  <object name="player" x="235" y="460"/>
+ </objectgroup>
+ <objectgroup name="rock_collide" width="32" height="32">
+  <object name="right_rock" x="369" y="96" width="15" height="255">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="top_rock" x="129" y="81" width="254" height="15">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="left_rock" x="127" y="98" width="15" height="253">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+  <object name="bottom_rock" x="145" y="336" width="222" height="14">
+   <properties>
+    <property name="collide" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,34 +1,62 @@
-//
-//  HelloWorldLayer.h
-//  Box2D
-//
-//  Created by Sam Lee on 2013/04/19.
-//  Copyright __MyCompanyName__ 2013年. All rights reserved.
-//
-
-
-#import <GameKit/GameKit.h>
-
-// When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+
+#import "GameObject.h"
 #import "Box2D.h"
-#import "GLES-Render.h"
+#import "SimpleAudioEngine.h"
+#import "MyContactListener.h"
+#import "HUDLayer.h"
+#import "PauseButton.h"
 
-//Pixel to metres ratio. Box2D uses metres as the unit for measurement.
-//This ratio defines how many pixels correspond to 1 Box2D "metre"
-//Box2D is optimized for objects of 1x1 metre therefore it makes sense
-//to define the ratio so that your most common object type is 1x1 metre.
-#define PTM_RATIO 32
+@interface HelloWorldLayer : CCLayer {
+    HUDLayer * _hud;
+    BOOL hud_paused;
+    
+    b2World *_world;
+    b2Body *_body;
+    CCSprite *_ball;
+    b2Body *_ballBody;
+    b2Fixture *_ballFixture;
+    b2Fixture *_monsterFixture;
+    b2Body *_monsBody;
+    b2Body *_wallBody;
+    b2Fixture *_wallFixture;
+    
+    b2Fixture *_bottomFixture;
+    
+    NSMutableArray *_monsters;
+    
+    CCSprite *_snake;
+    CCAction *_snakeAction;
+    CCSprite *_croc;
+    CCAction *_crocAction;
+    
+ 
+    MyContactListener *_contactListener;
+    
+    //CCAnimation *_ballAnimationFrames;
+    NSArray * _ballAnimationFrames;
+    CCAction *ballAction;
+    CGPoint monsPos;
+    CGPoint ballPos;
+    CGSize monsSize;
+    
+    CCSpriteBatchNode *_spriteSheet;
+    CCTMXObjectGroup *_objectGroup;
+    NSDictionary *_spawnPoint;
+    int mons_x;
+    int mons_y;
+    
+    CCSprite *_hole;
+    CGPoint holePos;
+    CGSize holeSize;
+    
+    b2Body *_spriteBody;
+    
+    b2Vec2 _ballForce;
 
-// HelloWorldLayer
-@interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
-{
-	CCTexture2D *spriteTexture_;	// weak ref
-	b2World* world;					// strong ref
-	GLESDebugDraw *m_debugDraw;		// strong ref
 }
 
-// returns a CCScene that contains the HelloWorldLayer as the only child
-+(CCScene *) scene;
++ (id) scene;
+- (id)initWithHUD:(HUDLayer *)hud;
 
 @end

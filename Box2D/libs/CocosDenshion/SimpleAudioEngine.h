@@ -22,7 +22,7 @@
  $Id$
  */
 
-
+#import "CocosDenshion.h"
 #import "CDAudioManager.h"
 
 /**
