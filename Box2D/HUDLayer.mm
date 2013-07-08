@@ -8,6 +8,8 @@
 
 #import "HUDLayer.h"
 #import "HelloWorldLayer.h"
+#import "MenuLayer.h"
+#import "SettingsManager.h"
 
 
 @implementation HUDLayer
@@ -18,11 +20,6 @@
     
     if ((self = [super init])) {
         
-//        _dPad = [PauseButton dPadWithFile:@"Icon.png" radius:72];
-//        _dPad.position = ccp(72.0, 72.0);
-//        _dPad.opacity = 100;
-//        [self addChild:_dPad];
-//        
         CGSize winSize = [CCDirector sharedDirector].winSize;
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             _statusLabel = [CCLabelBMFont labelWithString:@"" fntFile:@"Arial-hd.fnt"];
@@ -32,6 +29,7 @@
         _statusLabel.position = ccp(winSize.width* 0.85, winSize.height * 0.9);
         [self addChild:_statusLabel];
         [self createPauseButton];
+        [self createPausedMenu];
     }
     return self;
 }
@@ -41,20 +39,36 @@
 }
 
 - (void)pauseButtonWasPressed:(id)sender {
-     paused = YES;
+
+    [[SettingsManager sharedSettingsManager] logSettings];
     
-    NSLog(@"hellow");
-    NSLog(@"Is it: %@", paused? @"Yes":@"No");
+    // pause the game
+    paused = YES;
+    
+    // hide the pause button
+    [pauseButton runAction:[CCFadeOut actionWithDuration:0.5]];
+    
+    // bring the sprite that shows the word 'Paused' into view
+    [pausedSprite runAction:[CCMoveTo actionWithDuration:0.5
+                                                position:ccp([CCDirector sharedDirector].winSize.width/2-10, [CCDirector sharedDirector].winSize.height/2+50)]];
+    // bring the paued menu into view
+    id move = [CCMoveTo actionWithDuration:0.5
+                                  position:ccp([CCDirector sharedDirector].winSize.width/2, [CCDirector sharedDirector].winSize.height/2-100)];
+//    id end = [[CCActionManager sharedManager] pauseAllRunningActions];
+    
+     [pausedMenu runAction:[CCSequence actions: move, nil]];
+
+    
+//    [pausedMenu runAction:[CCMoveTo actionWithDuration:0.5
+//                                              position:ccp([CCDirector sharedDirector].winSize.width/2, [CCDirector sharedDirector].winSize.height/2-100)]];
+    //[[CCActionManager sharedManager] pauseAllRunningActions];
 }
 
--(BOOL)getPause{
-    return paused;
-}
 
 - (void)createPauseButton {
     
     // create sprite for the pause button
-    pauseButton = [CCSprite spriteWithFile:@"Icon.png"];
+    pauseButton = [CCSprite spriteWithFile:@"PauseButton.png"];
     
     // create menu item for the pause button from the pause sprite
     CCMenuItemSprite *item = [CCMenuItemSprite itemFromNormalSprite:pauseButton
@@ -65,48 +79,94 @@
     // create menu for the pause button and put the menu item on the menu
     CCMenu *menu = [CCMenu menuWithItems: item, nil];
     [menu setAnchorPoint:ccp(0, 0)];
-    [menu setIsRelativeAnchorPoint:NO];
-    [menu setPosition:ccp([CCDirector sharedDirector].winSize.width/2, [CCDirector sharedDirector].winSize.height-16)];
+//    [menu setIsRelativeAnchorPoint:NO];
+    [menu setPosition:ccp(30,30)];
+//    [menu setPosition:ccp([CCDirector sharedDirector].winSize.width/2, [CCDirector sharedDirector].winSize.height-16)];
     [menu setScale:0.3];
     [self addChild:menu];
 }
 
 
-- (void)registerWithTouchDispatcher {
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+-(void)createPausedMenu {
+    
+    // create a sprite that says simply 'Paused'
+    pausedSprite = [CCSprite spriteWithFile:@"Paused.png"];
+    
+    // create the quit button
+    CCMenuItemSprite *item1 =
+    [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithFile:@"QuitButton.png"]
+                            selectedSprite:nil
+                                    target:self selector:@selector(quitButtonWasPressed:)];
+    CCLabelBMFont *quitFont = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"Arial.fnt"];
+    quitFont.scale = 0.5;
+    [quitFont setAnchorPoint: ccp(-0.7f, 1.f)];
+    [item1 addChild: quitFont];
+    
+    // create the restart button
+    CCMenuItemSprite *item2 =
+    [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithFile:@"RestartButton.png"]
+                            selectedSprite:nil
+                                    target:self
+                                  selector:@selector(restartButtonWasPressed:)];
+    // create the resume button
+    CCMenuItemSprite *item3 =
+    [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithFile:@"ResumeButton.png"]
+                            selectedSprite:nil
+                                    target:self
+                                  selector:@selector(resumeButtonWasPressed:)];
+    
+    // put all those three buttons on the menu
+    pausedMenu = [CCMenu menuWithItems:item1, item2, item3, nil];
+    
+    // align the menu
+    [pausedMenu alignItemsInRows:
+     [NSNumber numberWithInt:1],
+     [NSNumber numberWithInt:1],
+     [NSNumber numberWithInt:1],
+     nil];
+    
+    // create the paused sprite and paused menu buttons off screen
+    [pausedSprite setPosition:ccp([CCDirector sharedDirector].winSize.width/2-10, [CCDirector sharedDirector].winSize.height + 200)];
+    [pausedMenu setPosition:ccp([CCDirector sharedDirector].winSize.width/2, -300)];
+    
+    // add the Paused sprite and menu to the current layer
+    [self addChild:pausedSprite z:100];
+    [self addChild:pausedMenu z:100];
 }
 
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CGPoint location = [self convertTouchToNodeSpace:touch];
-    location = [[CCDirector sharedDirector] convertToGL: location];
-    if(location.y)
-    {
-        NSLog(@"hellow");
-        return YES;
-        //        [[CCDirector sharedDirector] pause];
-    }
-    // default to not consume touch
-    return NO;
+
+- (void)quitButtonWasPressed:(id)sender {
+    [[CCDirector sharedDirector] replaceScene: [MenuLayer scene]];
 }
 
-//- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    UITouch* touch = [touches anyObject];
-//    CGPoint location = [touch locationInView:touch.view];
-//    location = [[CCDirector sharedDirector] convertToGL: location];
-//    if(location.y>20)
-//    {
-//        NSLog(@"Hello");
-////        [[CCDirector sharedDirector] pause];
-//    }
-//}
+- (void)restartButtonWasPressed:(id)sender {
+//    [SceneManager goGameScene];
+//    HelloWorldLayer *layer = (HelloWorldLayer *)self.parent;
+//    CCScene *temp = [[CCDirector sharedDirector] runningScene];
+//    [[CCDirector sharedDirector] replaceScene:[layer scene]];
+    NSLog(@"Restart");
+}
+
+- (void)resumeButtonWasPressed:(id)sender {
+    // unpause the game
+    paused = NO;
+    
+    // show the pause button
+    [pauseButton runAction:[CCFadeIn actionWithDuration:0.5]];
+    
+    // hide the sprite that shows the word 'Paused' from view
+    [pausedSprite runAction:[CCMoveTo actionWithDuration:0.5
+                                                position:ccp([CCDirector sharedDirector].winSize.width/2-10, [CCDirector sharedDirector].winSize.height + 200)]];
+    // hide the paued menu from view
+    [pausedMenu runAction:[CCMoveTo actionWithDuration:0.5
+                                              position:ccp([CCDirector sharedDirector].winSize.width/2, -300)]];
+}
+
 
 - (void)restartTapped:(id)sender {
-    
     // Reload the current scene
     CCScene *scene = [HelloWorldLayer scene];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionZoomFlipX transitionWithDuration:0.5 scene:scene]];
-    
 }
 
 - (void)showRestartMenu:(BOOL)won {

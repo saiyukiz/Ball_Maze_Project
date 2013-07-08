@@ -15,6 +15,11 @@
 		EF39B92D1747441600407F5C /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF39B92A1747441500407F5C /* CreditsLayer.m */; };
 		EF39B92E1747441600407F5C /* GuideLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF39B92C1747441600407F5C /* GuideLayer.m */; };
 		EF39B9301747461300407F5C /* seeker.png in Resources */ = {isa = PBXBuildFile; fileRef = EF39B92F1747461300407F5C /* seeker.png */; };
+		EF4A7F931773E9D8004F48BF /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A7F921773E9D8004F48BF /* PauseButton.png */; };
+		EF4A7F981773F9CE004F48BF /* Paused.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A7F941773F9CE004F48BF /* Paused.png */; };
+		EF4A7F991773F9CE004F48BF /* QuitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A7F951773F9CE004F48BF /* QuitButton.png */; };
+		EF4A7F9A1773F9CE004F48BF /* RestartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A7F961773F9CE004F48BF /* RestartButton.png */; };
+		EF4A7F9B1773F9CE004F48BF /* ResumeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A7F971773F9CE004F48BF /* ResumeButton.png */; };
 		EF50416A1747FA38003C2666 /* snakes.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF5041681747FA38003C2666 /* snakes.plist */; };
 		EF50416B1747FA38003C2666 /* snakes.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5041691747FA38003C2666 /* snakes.png */; };
 		EF50416E17480C40003C2666 /* Trial_Map-hd.tmx in Resources */ = {isa = PBXBuildFile; fileRef = EF50416C17480C3F003C2666 /* Trial_Map-hd.tmx */; };
@@ -24,7 +29,6 @@
 		EF64AB00177260CC009699E0 /* Arial-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = EF64AAFC177260CC009699E0 /* Arial-hd.png */; };
 		EF64AB01177260CC009699E0 /* Arial.fnt in Resources */ = {isa = PBXBuildFile; fileRef = EF64AAFD177260CC009699E0 /* Arial.fnt */; };
 		EF64AB02177260CC009699E0 /* Arial.png in Resources */ = {isa = PBXBuildFile; fileRef = EF64AAFE177260CC009699E0 /* Arial.png */; };
-		EF64AB0B177295C0009699E0 /* PauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF64AB0A177295C0009699E0 /* PauseButton.m */; };
 		EF661FD5173DD8460015A7CB /* MyContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF661FD4173DD8460015A7CB /* MyContactListener.mm */; };
 		EF661FD8173DDB240015A7CB /* ball_falling_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF661FD6173DDB240015A7CB /* ball_falling_anim.plist */; };
 		EF661FD9173DDB240015A7CB /* ball_falling_anim.png in Resources */ = {isa = PBXBuildFile; fileRef = EF661FD7173DDB240015A7CB /* ball_falling_anim.png */; };
@@ -203,6 +207,7 @@
 		EF7C05891720A7B600EFC5E1 /* PhysicsSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF7C05881720A7B600EFC5E1 /* PhysicsSprite.mm */; };
 		EF7C058B1720A7B600EFC5E1 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7C058A1720A7B600EFC5E1 /* blocks.png */; };
 		EF9FE0321747F43F00BE792F /* bear.png in Resources */ = {isa = PBXBuildFile; fileRef = EF9FE0311747F43F00BE792F /* bear.png */; };
+		EFA738D41780E66800D82A69 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA738D31780E66800D82A69 /* SettingsManager.m */; };
 		EFB8FACF174330EC00C6B2F2 /* hole.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB8FACE174330EC00C6B2F2 /* hole.png */; };
 		EFB8FAD1174337E900C6B2F2 /* death1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EFB8FAD0174337E900C6B2F2 /* death1.wav */; };
 		EFB8FAD31743394400C6B2F2 /* win2.wav in Resources */ = {isa = PBXBuildFile; fileRef = EFB8FAD21743394300C6B2F2 /* win2.wav */; };
@@ -225,6 +230,11 @@
 		EF39B92B1747441600407F5C /* GuideLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideLayer.h; sourceTree = "<group>"; };
 		EF39B92C1747441600407F5C /* GuideLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideLayer.m; sourceTree = "<group>"; };
 		EF39B92F1747461300407F5C /* seeker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seeker.png; sourceTree = "<group>"; };
+		EF4A7F921773E9D8004F48BF /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
+		EF4A7F941773F9CE004F48BF /* Paused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paused.png; sourceTree = "<group>"; };
+		EF4A7F951773F9CE004F48BF /* QuitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuitButton.png; sourceTree = "<group>"; };
+		EF4A7F961773F9CE004F48BF /* RestartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButton.png; sourceTree = "<group>"; };
+		EF4A7F971773F9CE004F48BF /* ResumeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResumeButton.png; sourceTree = "<group>"; };
 		EF5041681747FA38003C2666 /* snakes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = snakes.plist; path = Resources/snakes.plist; sourceTree = "<group>"; };
 		EF5041691747FA38003C2666 /* snakes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snakes.png; path = Resources/snakes.png; sourceTree = "<group>"; };
 		EF50416C17480C3F003C2666 /* Trial_Map-hd.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Trial_Map-hd.tmx"; sourceTree = "<group>"; };
@@ -235,8 +245,6 @@
 		EF64AAFC177260CC009699E0 /* Arial-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arial-hd.png"; sourceTree = "<group>"; };
 		EF64AAFD177260CC009699E0 /* Arial.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Arial.fnt; sourceTree = "<group>"; };
 		EF64AAFE177260CC009699E0 /* Arial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arial.png; sourceTree = "<group>"; };
-		EF64AB09177295C0009699E0 /* PauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseButton.h; sourceTree = "<group>"; };
-		EF64AB0A177295C0009699E0 /* PauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseButton.m; sourceTree = "<group>"; };
 		EF661FD3173DD8460015A7CB /* MyContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyContactListener.h; sourceTree = "<group>"; };
 		EF661FD4173DD8460015A7CB /* MyContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyContactListener.mm; sourceTree = "<group>"; };
 		EF661FD6173DDB240015A7CB /* ball_falling_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ball_falling_anim.plist; path = Resources/ball_falling_anim.plist; sourceTree = "<group>"; };
@@ -603,6 +611,8 @@
 		EF7C05881720A7B600EFC5E1 /* PhysicsSprite.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSprite.mm; sourceTree = "<group>"; };
 		EF7C058A1720A7B600EFC5E1 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		EF9FE0311747F43F00BE792F /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bear.png; path = Resources/bear.png; sourceTree = "<group>"; };
+		EFA738D21780E66700D82A69 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		EFA738D31780E66800D82A69 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		EFB8FACE174330EC00C6B2F2 /* hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hole.png; sourceTree = "<group>"; };
 		EFB8FAD0174337E900C6B2F2 /* death1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death1.wav; sourceTree = "<group>"; };
 		EFB8FAD21743394300C6B2F2 /* win2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win2.wav; sourceTree = "<group>"; };
@@ -634,6 +644,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF12A3401777F0AF0053DBA1 /* pause_button_pic */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A7F941773F9CE004F48BF /* Paused.png */,
+				EF4A7F951773F9CE004F48BF /* QuitButton.png */,
+				EF4A7F961773F9CE004F48BF /* RestartButton.png */,
+				EF4A7F971773F9CE004F48BF /* ResumeButton.png */,
+				EF4A7F921773E9D8004F48BF /* PauseButton.png */,
+			);
+			name = pause_button_pic;
+			sourceTree = "<group>";
+		};
+		EF12A3411777F0CE0053DBA1 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EFB8FAD21743394300C6B2F2 /* win2.wav */,
+				EFB8FAD0174337E900C6B2F2 /* death1.wav */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		EF12A3421777F1050053DBA1 /* animation_sprites */ = {
+			isa = PBXGroup;
+			children = (
+				EF5041681747FA38003C2666 /* snakes.plist */,
+				EF5041691747FA38003C2666 /* snakes.png */,
+				EF0DAB8D17496A1000C5DBF2 /* crocs.plist */,
+				EF0DAB8E17496A1000C5DBF2 /* crocs.png */,
+				EF1F954D1740A1E60068D2E2 /* bear.plist */,
+				EF9FE0311747F43F00BE792F /* bear.png */,
+				EF12112C1741F4DD004C4B22 /* starttown2-hd.png */,
+				EF661FD6173DDB240015A7CB /* ball_falling_anim.plist */,
+				EF661FD7173DDB240015A7CB /* ball_falling_anim.png */,
+			);
+			name = animation_sprites;
+			sourceTree = "<group>";
+		};
 		EF64AAFA177260CC009699E0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,8 +745,8 @@
 				EF7C057F1720A7B600EFC5E1 /* HelloWorldLayer.mm */,
 				EF64AAF71772599A009699E0 /* HUDLayer.h */,
 				EF64AAF81772599A009699E0 /* HUDLayer.mm */,
-				EF64AB09177295C0009699E0 /* PauseButton.h */,
-				EF64AB0A177295C0009699E0 /* PauseButton.m */,
+				EFA738D21780E66700D82A69 /* SettingsManager.h */,
+				EFA738D31780E66800D82A69 /* SettingsManager.m */,
 				EFC640F6172B7435008F067D /* GameObject.h */,
 				EFC640F7172B7435008F067D /* GameObject.m */,
 				EF7C05811720A7B600EFC5E1 /* IntroLayer.h */,
@@ -719,20 +766,12 @@
 		EF7C03711720A7B200EFC5E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF50416C17480C3F003C2666 /* Trial_Map-hd.tmx */,
-				EF50416D17480C3F003C2666 /* Trial_Map.tmx */,
-				EFB8FAD21743394300C6B2F2 /* win2.wav */,
-				EFB8FAD0174337E900C6B2F2 /* death1.wav */,
-				EF5041681747FA38003C2666 /* snakes.plist */,
-				EF5041691747FA38003C2666 /* snakes.png */,
-				EF0DAB8D17496A1000C5DBF2 /* crocs.plist */,
-				EF0DAB8E17496A1000C5DBF2 /* crocs.png */,
-				EF1F954D1740A1E60068D2E2 /* bear.plist */,
-				EF9FE0311747F43F00BE792F /* bear.png */,
+				EF12A3411777F0CE0053DBA1 /* sounds */,
+				EF12A3401777F0AF0053DBA1 /* pause_button_pic */,
+				EF12A3421777F1050053DBA1 /* animation_sprites */,
 				EFB8FACE174330EC00C6B2F2 /* hole.png */,
-				EF12112C1741F4DD004C4B22 /* starttown2-hd.png */,
-				EF661FD6173DDB240015A7CB /* ball_falling_anim.plist */,
-				EF661FD7173DDB240015A7CB /* ball_falling_anim.png */,
+				EF50416D17480C3F003C2666 /* Trial_Map.tmx */,
+				EF50416C17480C3F003C2666 /* Trial_Map-hd.tmx */,
 				EFEE89D61733022A00A94858 /* starttown2.png */,
 				EFEE89C61732FF5600A94858 /* ball 2.png */,
 				EF7C03721720A7B200EFC5E1 /* Default.png */,
@@ -1340,6 +1379,11 @@
 				EF64AB00177260CC009699E0 /* Arial-hd.png in Resources */,
 				EF64AB01177260CC009699E0 /* Arial.fnt in Resources */,
 				EF64AB02177260CC009699E0 /* Arial.png in Resources */,
+				EF4A7F931773E9D8004F48BF /* PauseButton.png in Resources */,
+				EF4A7F981773F9CE004F48BF /* Paused.png in Resources */,
+				EF4A7F991773F9CE004F48BF /* QuitButton.png in Resources */,
+				EF4A7F9A1773F9CE004F48BF /* RestartButton.png in Resources */,
+				EF4A7F9B1773F9CE004F48BF /* ResumeButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,7 +1552,7 @@
 				EF39B92D1747441600407F5C /* CreditsLayer.m in Sources */,
 				EF39B92E1747441600407F5C /* GuideLayer.m in Sources */,
 				EF64AAF91772599A009699E0 /* HUDLayer.mm in Sources */,
-				EF64AB0B177295C0009699E0 /* PauseButton.m in Sources */,
+				EFA738D41780E66800D82A69 /* SettingsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

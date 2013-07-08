@@ -6,8 +6,8 @@
 @property (strong) CCTMXTiledMap *tileMap;
 @property (strong) CCTMXLayer *background;
 
-@property (nonatomic, strong) CCSprite *bear;
-@property (nonatomic, strong) CCAction *bearAction;
+//@property (nonatomic, strong) CCSprite *bear;
+//@property (nonatomic, strong) CCAction *bearAction;
 
 @end
 
@@ -33,9 +33,7 @@
     
     if ((self=[super init])) {
         _hud = hud;
-        
-     
-                 
+                   
         self.isTouchEnabled = YES;
         self.isAccelerometerEnabled = YES;
         
@@ -56,59 +54,9 @@
         NSAssert(_objectGroup != nil, @"tile map has no objects object layer");
         
         
-        
-        
         //inserts monsters into an array
         _monsters = [[NSMutableArray alloc] init];
-        
-        
-               
-        
-//
-//        
-//        //ball animation
-//        // Access the shared frames cache - global store of frames
-//        CCSpriteFrameCache * cache = [CCSpriteFrameCache sharedSpriteFrameCache];
-//        
-//        // Load the available frames from the sprite sheet
-//        [cache addSpriteFramesWithFile:@"ball_falling_anim.plist" textureFilename:@"ball_falling_anim.png"];
-//        
-//        
-////        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"ball_falling_anim.plist"];
-////        CCSpriteBatchNode *ballSheet = [CCSpriteBatchNode batchNodeWithFile:@"ball_falling_anim.png"];
-////        [self addChild:ballSheet];
-////
-//        
-//        // Create an array of frames - stored as a member variable
-//        //NSMutableArray *ballFrames = [NSMutableArray new];
-//        NSMutableArray *ballFrames = [NSMutableArray array];
-//        for(NSInteger i =1; i<15; i++) {
-//            // The names of the objects in the sprite sheet are the same as the images files
-//            // before they are loaded into the sprite sheet i.e. ball-1, ball-2 etc...
-////            [ballFrames addObject:
-////             [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-////              [NSString stringWithFormat:@"ball-%d.png",i]]];
-//            [ballFrames addObject:[cache spriteFrameByName:[NSString stringWithFormat:@"ball-%i.png", i]]];
-//        }
-//        
-//        // Put these frames in a normal NSArray member variable
-//        //_ballAnimationFrames = [CCAnimation animationWithSpriteFrames:walkAnimFrames delay:0.1f];
-//        _ballAnimationFrames = [NSArray arrayWithArray:ballFrames];
-//        [_ballAnimationFrames retain];
-//        
-//        //ballAction = [CCAnimate actionWithAnimation:_ballAnimationFrames];
-//        
-//        _ball = [CCSprite spriteWithSpriteFrameName:@"ball-1.png"];
-//        //_ball = [CCSprite spriteWithSpriteFrameName:@"ball-1.png" rect:CGRectMake(0, 0, 32, 32)];
-//        _ball.position = ccp(ball_x,ball_y);
-//        _ball.tag = 1;
-////        ballAction = [CCRepeatForever actionWithAction:
-////                                      [CCAnimate actionWithAnimation:_ballAnimationFrames]];
-//       [self addChild:_ball];
-        
-       
-       
-        
+
         
         //define world physics gravity and physics related things for collisions
         b2Vec2 gravity = b2Vec2(0.0f, 0.0f);
@@ -151,6 +99,7 @@
         [self spawnSnake];
         [self spawnCroc];
         [self schedule:@selector(tick:)];
+      
     }    
     return self;
 }
@@ -198,40 +147,6 @@
     ballShapeDef.friction = 0.2f;
     ballShapeDef.restitution = 0.15f;
     _ballFixture = _ballBody->CreateFixture(&ballShapeDef);
-    
-    
-    
-//    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"bear.plist"];
-//    _spriteSheet = [CCSpriteBatchNode batchNodeWithFile:@"bear.png"];
-//    [self addChild:_spriteSheet];
-//    
-//    NSMutableArray *walkAnimFrames = [NSMutableArray array];
-//    for (int i=4; i<=7; i++) {
-//        [walkAnimFrames addObject:
-//         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-//          [NSString stringWithFormat:@"bear%d.png",i]]];
-//    }
-//    
-//    CCAnimation *walkAnim = [CCAnimation
-//                             animationWithSpriteFrames:walkAnimFrames delay:0.25f];
-//    
-//    
-//    for(_spawnPoint in [_objectGroup objects]){
-//        if([[_spawnPoint valueForKey:@"bearSpawn"] intValue] == 1){
-//            mons_x = [[_spawnPoint valueForKey:@"x"] intValue];
-//            mons_y = [[_spawnPoint valueForKey:@"y"] intValue];
-//            _bear = [CCSprite spriteWithSpriteFrameName:@"bear4.png"];
-//            _bear.tag = 2;
-//            _bear.position = ccp(mons_x, mons_y);
-//            _walkAction = [CCRepeatForever actionWithAction:
-//                           [CCAnimate actionWithAnimation:walkAnim]];
-//            [_bear runAction:_walkAction];
-//            [self addBoxBodyForSprite:_bear];
-//            [_spriteSheet addChild:_bear];
-//            
-//            [_monsters addObject:_bear];
-//        }
-//    }
 }
 
 //puts hole on screen
@@ -444,7 +359,7 @@
     b2PolygonShape spriteShape;
 //    spriteShape.SetAsBox(sprite.contentSize.width/PTM_RATIO/2,
 //                         sprite.contentSize.height/PTM_RATIO/2);
-    if (sprite.tag == 2) {
+    if (sprite.tag == 2) { //bear
         int num = 7;
         b2Vec2 verts[] = {
             b2Vec2((-6.6f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO, (-67.2f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO),
@@ -458,7 +373,7 @@
 
         // Then add this
         spriteShape.Set(verts, num);
-    } else if (sprite.tag == 3) {
+    } else if (sprite.tag == 3) { //snake
         int num = 8;
         b2Vec2 verts[] = {
             b2Vec2((-18.3f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO, (-63.8f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO),
@@ -472,7 +387,7 @@
         };
         // Then add this
         spriteShape.Set(verts, num);
-    }else if (sprite.tag == 4) {
+    }else if (sprite.tag == 4) { //croc
         int num = 8;
         b2Vec2 verts[] = {
             b2Vec2((-144.3f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO, (9.3f/CC_CONTENT_SCALE_FACTOR()) / PTM_RATIO),
@@ -539,7 +454,7 @@
 }
 
 
-//specify WHERE the wall is for collision
+//SPECIFY WHERE the wall is for collision
 - (void) drawCollisionTiles {
 	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"wall_collide"];
 	NSMutableDictionary * objPoint;
@@ -654,25 +569,48 @@
 }
 
 
+-(void) actions_pause{
+//    [_bear pauseSchedulerAndActions];
+//    [_snake pauseSchedulerAndActions];
+//    [_croc pauseSchedulerAndActions];
+    
+    
+    for (CCSprite *monster in _monsters) {
+        [monster pauseSchedulerAndActions];
+    }
 
+}
+
+-(void) actions_resume{
+//    [_bear resumeSchedulerAndActions];
+//    [_snake resumeSchedulerAndActions];
+//    [_croc resumeSchedulerAndActions];
+    
+    for (CCSprite *monster in _monsters) {
+        [monster resumeSchedulerAndActions];
+    }
+}
 
 
 
 //updates every dt time
 -(void)tick:(ccTime)dt{
-    HUDLayer *hud = [HUDLayer node];
-    hud_paused = hud.paused;
+    //NSLog(@"Is it: %@", hud_paused? @"Yes":@"No");
+    hud_paused = _hud.paused;
     
+    //if game is NOT paused
     if(!hud_paused){
+        [self actions_resume];
+        
     // Apply a force to the ball
     if(_ball != Nil) {
-        // Apply the force to the ball
-        
         if(_ballForce.x!=0 && _ballForce.y != 0) {
             _ballBody->ApplyForce(_ballForce, _ballBody->GetWorldCenter());
         }
     }
-    // hud
+        
+        
+    // hud layer ontop of game layer
     [_hud setStatusString:[NSString stringWithFormat:@"Score: %d", 0]];
     
     _world->Step(dt, 10, 10);
@@ -707,9 +645,6 @@
             
         }
     }
-    
-    
-    for (CCSprite *monster in _monsters) {
 
         if (CGRectIntersectsRect(_ball.boundingBox, _hole.boundingBox)) {
             holePos = _hole.position;
@@ -730,11 +665,7 @@
             }
         }
 
-    }
-    
-    
-    
-    
+    //check for collision between ball body and other bodies
     std::vector<b2Body *>toDestroy;
     std::vector<MyContact>::iterator pos;
     for(pos = _contactListener->_contacts.begin();
@@ -750,33 +681,38 @@
             if ((spriteA.tag == 1 && spriteB.tag == 2) || (spriteA.tag == 1 && spriteB.tag == 3) || (spriteA.tag == 1 && spriteB.tag == 4)) {
                 [[SimpleAudioEngine sharedEngine] playEffect:@"death1.wav"];
                 _ballBody->SetAwake(false);
-                NSLog(@"Is it: %@", hud_paused? @"Yes":@"No");
-
-                [_hud showRestartMenu:NO];
-                [self unscheduleAllSelectors];
               
-//                [[CCDirector sharedDirector] pause];
-//                CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
-//                [[CCDirector sharedDirector] replaceScene:gameOverScene];
+//                [_hud showRestartMenu:NO];
+//                [self unscheduleAllSelectors];
+              
+                CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
+                [[CCDirector sharedDirector] replaceScene:gameOverScene];
+
             } else if ((spriteA.tag == 2 && spriteB.tag == 1) || (spriteA.tag == 3 && spriteB.tag == 1) || (spriteA.tag == 4 && spriteB.tag == 1)) {
                 [[SimpleAudioEngine sharedEngine] playEffect:@"death1.wav"];
                 _ballBody->SetAwake(false);
-                NSLog(@"Is it: %@", hud_paused? @"Yes":@"No");
+                
 
-                [_hud showRestartMenu:NO];
-                [self unscheduleAllSelectors];
-            
-//                CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
-//                [[CCDirector sharedDirector] replaceScene:gameOverScene];
+//                [_hud showRestartMenu:NO];
+//                [self unscheduleAllSelectors];
+                             
+                CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
+                [[CCDirector sharedDirector] replaceScene:gameOverScene];
             }
         }
     }
     
     [self setViewPointCenter:_ball.position];
 }
+    
+    //if game IS paused
+    else{
+        //[[CCDirector sharedDirector]pause];
+        [self actions_pause];
+//        [_bear pauseSchedulerAndActions];
+    }
+    
 }
-
-
 
 
 //ball animation upon reaching hole
@@ -798,7 +734,7 @@
     id move = [CCMoveTo actionWithDuration:0.1  position:ccp(holePos.x + holeSize.width*0.1,
                                                              holePos.y + holeSize.height*0.1)];
 
-    // Shrink the ball to 80% of it's normal size
+    // Shrink the ball to 50% of it's normal size
     id shrink = [CCScaleTo actionWithDuration:0.5 scale:0];
     
     // Setup the frame by frame rolling animation
@@ -806,14 +742,14 @@
    
 //    id animate = [CCAnimate actionWithAnimation:_ballAnimationFrames];
     
-    id animate = [CCAnimate  actionWithAnimation:[CCAnimation animationWithSpriteFrames:_ballAnimationFrames delay:0.1]];
+//    id animate = [CCAnimate  actionWithAnimation:[CCAnimation animationWithSpriteFrames:_ballAnimationFrames delay:0.1]];
     
     // When the animation has ended call the endAnimation function
     id end = [CCCallFunc actionWithTarget:self selector:@selector(endAnimation)];
 
    
-    // Put these actions into a sequence and run them
-    [_ball runAction:[CCSequence actions: shrink, end, nil]];
+    // Put these actions into a sequence and run them when ball is "falling"
+    [_ball runAction:[CCSequence actions: move, shrink, end, nil]];
     
 
 //    for (b2Body* b = _world->GetBodyList(); b; b = b->GetNext()) {
@@ -825,12 +761,11 @@
 }
 
 
-
 -(void) endAnimation {
     [[SimpleAudioEngine sharedEngine] playEffect:@"win2.wav"];
-    [_hud showRestartMenu:YES];
-//    CCScene *gameOverScene = [GameOverLayer sceneWithWon:YES];
-//    [[CCDirector sharedDirector] replaceScene:gameOverScene];
+//    [_hud showRestartMenu:YES];
+    CCScene *gameOverScene = [GameOverLayer sceneWithWon:YES];
+    [[CCDirector sharedDirector] replaceScene:gameOverScene];
 }
 
 
