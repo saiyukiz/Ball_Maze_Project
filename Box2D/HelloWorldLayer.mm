@@ -687,6 +687,7 @@
               
                 CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
                 [[CCDirector sharedDirector] replaceScene:gameOverScene];
+#warning Cam sucks
 
             } else if ((spriteA.tag == 2 && spriteB.tag == 1) || (spriteA.tag == 3 && spriteB.tag == 1) || (spriteA.tag == 4 && spriteB.tag == 1)) {
                 [[SimpleAudioEngine sharedEngine] playEffect:@"death1.wav"];
