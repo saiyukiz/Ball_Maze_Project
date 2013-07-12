@@ -249,7 +249,7 @@
 		EF661FD4173DD8460015A7CB /* MyContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyContactListener.mm; sourceTree = "<group>"; };
 		EF661FD6173DDB240015A7CB /* ball_falling_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ball_falling_anim.plist; path = Resources/ball_falling_anim.plist; sourceTree = "<group>"; };
 		EF661FD7173DDB240015A7CB /* ball_falling_anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball_falling_anim.png; path = Resources/ball_falling_anim.png; sourceTree = "<group>"; };
-		EF7C035B1720A7B200EFC5E1 /* Box2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Box2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7C035B1720A7B200EFC5E1 /* Ball_Maze_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ball_Maze_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7C035E1720A7B200EFC5E1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF7C03601720A7B200EFC5E1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		EF7C03621720A7B200EFC5E1 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -271,7 +271,7 @@
 		EF7C03841720A7B200EFC5E1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		EF7C03861720A7B200EFC5E1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		EF7C03881720A7B200EFC5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		EF7C03891720A7B200EFC5E1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
+		EF7C03891720A7B200EFC5E1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = text; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		EF7C038D1720A7B200EFC5E1 /* CCAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAction.h; path = libs/cocos2d/CCAction.h; sourceTree = "<group>"; };
 		EF7C038E1720A7B200EFC5E1 /* CCAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CCAction.m; path = libs/cocos2d/CCAction.m; sourceTree = "<group>"; };
 		EF7C03901720A7B200EFC5E1 /* CCActionCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCActionCamera.h; path = libs/cocos2d/CCActionCamera.h; sourceTree = "<group>"; };
@@ -695,7 +695,7 @@
 		EF7C03521720A7B200EFC5E1 = {
 			isa = PBXGroup;
 			children = (
-				EF7C03701720A7B200EFC5E1 /* Box2D */,
+				EF7C03701720A7B200EFC5E1 /* Ball_Maze_Project */,
 				EF7C035D1720A7B200EFC5E1 /* Frameworks */,
 				EF7C035C1720A7B200EFC5E1 /* Products */,
 			);
@@ -704,7 +704,7 @@
 		EF7C035C1720A7B200EFC5E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF7C035B1720A7B200EFC5E1 /* Box2D.app */,
+				EF7C035B1720A7B200EFC5E1 /* Ball_Maze_Project.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -725,7 +725,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF7C03701720A7B200EFC5E1 /* Box2D */ = {
+		EF7C03701720A7B200EFC5E1 /* Ball_Maze_Project */ = {
 			isa = PBXGroup;
 			children = (
 				EF1211181741DA1C004C4B22 /* Constants.h */,
@@ -760,7 +760,7 @@
 				EF7C038B1720A7B200EFC5E1 /* libs */,
 				EF7C05771720A7B600EFC5E1 /* Supporting Files */,
 			);
-			path = Box2D;
+			path = Ball_Maze_Project;
 			sourceTree = "<group>";
 		};
 		EF7C03711720A7B200EFC5E1 /* Resources */ = {
@@ -1297,9 +1297,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF7C035A1720A7B200EFC5E1 /* Box2D */ = {
+		EF7C035A1720A7B200EFC5E1 /* Ball_Maze_Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF7C058E1720A7B600EFC5E1 /* Build configuration list for PBXNativeTarget "Box2D" */;
+			buildConfigurationList = EF7C058E1720A7B600EFC5E1 /* Build configuration list for PBXNativeTarget "Ball_Maze_Project" */;
 			buildPhases = (
 				EF7C03571720A7B200EFC5E1 /* Sources */,
 				EF7C03581720A7B200EFC5E1 /* Frameworks */,
@@ -1309,9 +1309,9 @@
 			);
 			dependencies = (
 			);
-			name = Box2D;
+			name = Ball_Maze_Project;
 			productName = Box2D;
-			productReference = EF7C035B1720A7B200EFC5E1 /* Box2D.app */;
+			productReference = EF7C035B1720A7B200EFC5E1 /* Ball_Maze_Project.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1322,7 +1322,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = EF7C03561720A7B200EFC5E1 /* Build configuration list for PBXProject "Box2D" */;
+			buildConfigurationList = EF7C03561720A7B200EFC5E1 /* Build configuration list for PBXProject "Ball_Maze_Project" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1334,7 +1334,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF7C035A1720A7B200EFC5E1 /* Box2D */,
+				EF7C035A1720A7B200EFC5E1 /* Ball_Maze_Project */,
 			);
 		};
 /* End PBXProject section */
@@ -1565,6 +1565,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1589,6 +1591,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1612,15 +1615,15 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Box2D/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"Box2D/libs/kazmath/include\"";
-				INFOPLIST_FILE = Box2D/Resources/Info.plist;
+				GCC_PREFIX_HEADER = Ball_Maze_Project/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"Ball_Maze_Project/libs/kazmath/include\"";
+				INFOPLIST_FILE = Ball_Maze_Project/Resources/Info.plist;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"Box2D/libs\"";
+				PRODUCT_NAME = Ball_Maze_Project;
+				USER_HEADER_SEARCH_PATHS = "\"Ball_Maze_Project/libs\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1631,15 +1634,15 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Box2D/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"Box2D/libs/kazmath/include\"";
-				INFOPLIST_FILE = Box2D/Resources/Info.plist;
+				GCC_PREFIX_HEADER = Ball_Maze_Project/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"Ball_Maze_Project/libs/kazmath/include\"";
+				INFOPLIST_FILE = Ball_Maze_Project/Resources/Info.plist;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"Box2D/libs\"";
+				PRODUCT_NAME = Ball_Maze_Project;
+				USER_HEADER_SEARCH_PATHS = "\"Ball_Maze_Project/libs\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1648,7 +1651,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF7C03561720A7B200EFC5E1 /* Build configuration list for PBXProject "Box2D" */ = {
+		EF7C03561720A7B200EFC5E1 /* Build configuration list for PBXProject "Ball_Maze_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF7C058C1720A7B600EFC5E1 /* Debug */,
@@ -1657,7 +1660,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF7C058E1720A7B600EFC5E1 /* Build configuration list for PBXNativeTarget "Box2D" */ = {
+		EF7C058E1720A7B600EFC5E1 /* Build configuration list for PBXNativeTarget "Ball_Maze_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF7C058F1720A7B600EFC5E1 /* Debug */,
