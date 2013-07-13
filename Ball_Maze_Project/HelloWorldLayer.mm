@@ -13,6 +13,9 @@
 
 
 
+//COSC345 suck balls
+
+
 @implementation HelloWorldLayer
 
 + (id)scene {
