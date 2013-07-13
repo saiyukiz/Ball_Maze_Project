@@ -10,7 +10,7 @@
 //@property (nonatomic, strong) CCAction *bearAction;
 
 @end
-
+// viteetarm
 //peter
 //COSC345 suck balls
 //hahaha
